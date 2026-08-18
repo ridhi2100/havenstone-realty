@@ -298,30 +298,39 @@ img {
 .hero-trust {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 25px;
   margin-top: 75px;
+  width: 100%;
+  text-align: center;
 }
 
 .trust-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 3px;
+  text-align: center;
 }
 
 .trust-item strong {
   font-family: "Playfair Display", serif;
   font-size: 30px;
+  text-align: center;
 }
 
 .trust-item span {
   color: rgba(255, 255, 255, 0.65);
   font-size: 11px;
+  text-align: center;
 }
 
 .trust-divider {
   width: 1px;
   height: 35px;
   background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .hero-scroll {
@@ -2213,4 +2222,215 @@ img {
 .navbar .btn {
   font-size: 16px !important;
   font-weight: 600 !important;
+}
+/* =========================================
+   STATS / NUMBERS - CENTER ALIGNMENT
+========================================= */
+
+.stats,
+.stats-container,
+.stats-grid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+.stat,
+.stat-item {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Number */
+.stat-number,
+.stat h3,
+.stat-item h3 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Label */
+.stat-label,
+.stat p,
+.stat-item p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+@media (max-width: 768px) {
+  .stats,
+  .stats-container,
+  .stats-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .stat,
+  .stat-item {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .stat-number,
+  .stat-label,
+  .stat h3,
+  .stat p,
+  .stat-item h3,
+  .stat-item p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+/* =========================================
+   HERO TRUST - CENTER OF FULL HERO
+========================================= */
+
+.hero-trust {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 70px !important;
+  transform: translateX(-50%) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: max-content !important;
+  gap: 35px !important;
+  margin: 0 !important;
+}
+
+.trust-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.trust-item strong {
+  text-align: center !important;
+}
+
+.trust-item span {
+  text-align: center !important;
+}
+
+.trust-divider {
+  flex-shrink: 0 !important;
+}
+.hero-container {
+  position: static !important;
+}
+/* =========================================
+   PROFESSIONAL REQUIREMENT DROPDOWN
+========================================= */
+
+.select-wrapper {
+  position: relative;
+  border: 1px solid #dcded9;
+  border-radius: 8px;
+  padding: 10px 42px 10px 15px;
+  background: #fff;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Label */
+.select-wrapper label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  color: #8a8e88;
+  margin-bottom: 5px;
+}
+
+/* Select */
+.select-wrapper select {
+  width: 100%;
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  color: #1d3028;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Placeholder */
+.select-wrapper select option:first-child {
+  color: #999;
+}
+
+/* Dropdown arrow */
+.select-wrapper > svg {
+  position: absolute;
+  right: 15px;
+  bottom: 14px;
+  color: #8b918b;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+}
+
+/* Hover */
+.select-wrapper:hover {
+  border-color: #c7a96b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus */
+.select-wrapper:focus-within {
+  border-color: #c7a96b;
+  box-shadow: 0 0 0 3px rgba(199, 169, 107, 0.12);
+}
+
+/* Arrow when focused */
+.select-wrapper:focus-within > svg {
+  transform: rotate(180deg);
+}
+.select-wrapper select option {
+  background: white;
+  color: #1d3028;
+  font-size: 14px;
+  padding: 12px;
+}
+@media (max-width: 760px) {
+  .select-wrapper {
+    padding: 11px 42px 11px 15px;
+    min-height: 62px;
+  }
+
+  .select-wrapper label {
+    font-size: 9px;
+    margin-bottom: 6px;
+  }
+
+  .select-wrapper select {
+    font-size: 15px;
+  }
+
+  .select-wrapper > svg {
+    right: 15px;
+    bottom: 16px;
+  }
 }
